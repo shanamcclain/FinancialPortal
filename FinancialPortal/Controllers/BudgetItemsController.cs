@@ -12,7 +12,7 @@ namespace FinancialPortal.Controllers
 {
     public class BudgetItemsController : Controller
     {
-        private Budgeter db = new Budgeter();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: BudgetItems
         public ActionResult Index()

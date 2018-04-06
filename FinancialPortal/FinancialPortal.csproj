@@ -203,11 +203,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804061440571_clean.cs" />
+    <Compile Include="Migrations\201804061440571_clean.Designer.cs">
+      <DependentUpon>201804061440571_clean.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Budget.cs" />
-    <Compile Include="Models\Budgeter.cs" />
     <Compile Include="Models\BudgetItem.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Email.cs" />
+    <Compile Include="Models\Helpers\LoginHelper.cs" />
     <Compile Include="Models\Household.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Invite.cs" />
@@ -847,6 +853,11 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201804061440571_clean.resx">
+      <DependentUpon>201804061440571_clean.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

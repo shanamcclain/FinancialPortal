@@ -15,6 +15,7 @@ namespace FinancialPortal.Models
         public string FullName { get; set; }
         public string DisplayName { get; set; }
         public string ProfilePic { get; set; }
+        public string InviteEmail { get; set; }
 
         public virtual ICollection<Household> Households { get; set; }
         public virtual ICollection<PersonalAccount> PersonalAccounts { get; set; }
@@ -23,7 +24,6 @@ namespace FinancialPortal.Models
 
         public ApplicationUser()
         {
-            Households = new HashSet<Household>();
             PersonalAccounts = new HashSet<PersonalAccount>();
             Transactions = new HashSet<Transaction>();
             Invites = new HashSet<Invite>();
@@ -54,6 +54,14 @@ namespace FinancialPortal.Models
         {
             return new ApplicationDbContext();
         }
+
+        public virtual DbSet<BudgetItem> BudgetItems { get; set; }
+        public virtual DbSet<Budget> Budgets { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Household> Households { get; set; }
+        public virtual DbSet<Invite> Invites { get; set; }
+        public virtual DbSet<PersonalAccount> PersonalAccounts { get; set; }
+        public virtual DbSet<Transaction> Transactions { get; set; }
 
     }
 }

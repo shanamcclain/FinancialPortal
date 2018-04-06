@@ -8,6 +8,11 @@ namespace FinancialPortal.Models
 
     public partial class Household
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string PrimaryUserId { get; set; }
+
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Household()
         {
@@ -18,9 +23,6 @@ namespace FinancialPortal.Models
             Categories = new HashSet<Category>();
         }
 
-        public int Id { get; set; }
-
-        public string Name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ApplicationUser> User { get; set; }

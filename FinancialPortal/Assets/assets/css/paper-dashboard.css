@@ -541,7 +541,7 @@ body.swal2-iosfix {
     }
 
     .swal2-modal .swal2-select {
-        color: #545454;
+        color: #f77d20;
         font-size: inherit;
         padding: 5px 10px;
         min-width: 40%;
@@ -5525,7 +5525,7 @@ strong {
         position: relative;
         z-index: 4;
         display: block;
-        background-color: #1f1f14;
+        background-color: #2f3040;
     }
 
         .sidebar .logo a.logo-mini,
@@ -5585,7 +5585,7 @@ strong {
         z-index: 4;
         box-shadow: inset -1px 0px 0px 0px #cfcfca;
         width: 260px;
-        background-color: #1f1f14;
+        background-color: #2f3040;
     }
 
         .sidebar .sidebar-wrapper .dropdown.open .dropdown-backdrop,
@@ -5958,7 +5958,7 @@ strong {
     }
 
 .main-panel {
-    background-color: #f4f3ef;
+    background-color: #fcfcfc;
     overflow: auto;
     position: relative;
     z-index: 2;
@@ -5970,6 +5970,7 @@ strong {
     .main-panel > .content {
         padding: 30px 15px 0 15px;
         min-height: calc(100% - 123px);
+        background-color: #fcfcfc;
     }
 
         .main-panel > .content .row .col-md-12 > .title {
@@ -6096,8 +6097,8 @@ strong {
     font-size: 14px;
     font-weight: 600;
     padding: 7px 18px;
-    border-color: #66615B;
-    color: #66615B;
+    border-color: #2f3040;
+    color: #2f3040;
     -webkit-transition: all 150ms linear;
     -moz-transition: all 150ms linear;
     -o-transition: all 150ms linear;
@@ -6112,9 +6113,9 @@ strong {
     .navbar .navbar-nav > li > a.btn.active,
     .navbar .navbar-nav > li > a.btn:active:focus,
     .navbar .navbar-nav > li > a.btn:active:hover, .open > .navbar .navbar-nav > li > a.btn.dropdown-toggle, .open > .navbar .navbar-nav > li > a.btn.dropdown-toggle:focus, .open > .navbar .navbar-nav > li > a.btn.dropdown-toggle:hover {
-        background-color: #66615B;
+        background-color: #0f1b2d;
         color: rgba(255, 255, 255, 0.85);
-        border-color: #66615B;
+        border-color: #2f3040;
     }
 
         .btn:hover .caret, .btn:focus .caret, .btn:active .caret, .btn.active .caret, .btn:active:focus .caret, .btn:active:hover .caret, .open > .btn.dropdown-toggle .caret, .open > .btn.dropdown-toggle:focus .caret, .open > .btn.dropdown-toggle:hover .caret,
@@ -6147,13 +6148,13 @@ strong {
     .navbar .navbar-nav > li > a.btn[disabled]:active,
     .navbar .navbar-nav > li > a.btn[disabled].active, fieldset[disabled] .navbar .navbar-nav > li > a.btn, fieldset[disabled] .navbar .navbar-nav > li > a.btn:hover, fieldset[disabled] .navbar .navbar-nav > li > a.btn:focus, fieldset[disabled] .navbar .navbar-nav > li > a.btn.focus, fieldset[disabled] .navbar .navbar-nav > li > a.btn:active, fieldset[disabled] .navbar .navbar-nav > li > a.btn.active {
         background-color: transparent;
-        border-color: #66615B;
+        border-color: #f77d20;
     }
 
     .btn.btn-fill,
     .navbar .navbar-nav > li > a.btn.btn-fill {
         color: #FFFFFF;
-        background-color: #66615B;
+        background-color: #2f3040;
         opacity: 1;
         filter: alpha(opacity=100);
     }
@@ -6695,11 +6696,11 @@ body {
         }
 
 a {
-    color: #68B3C8;
+    color: #e4700c;
 }
 
     a:hover, a:focus {
-        color: #429cb6;
+        color: #282727;
         text-decoration: none;
     }
 

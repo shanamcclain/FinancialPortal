@@ -7,12 +7,13 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using FinancialPortal.Models;
+using Microsoft.AspNet.Identity;
 
 namespace FinancialPortal.Controllers
 {
     public class HouseholdsController : Controller
     {
-        private Budgeter db = new Budgeter();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Households
         public ActionResult Index()
@@ -46,10 +47,11 @@ namespace FinancialPortal.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name")] Household household)
+        public ActionResult Create([Bind(Include = "Id,Name,PrimaryUserId")] Household household)
         {
             if (ModelState.IsValid)
             {
+                household.PrimaryUserId = User.Identity.GetUserId();
                 db.Households.Add(household);
                 db.SaveChanges();
                 return RedirectToAction("Index");
