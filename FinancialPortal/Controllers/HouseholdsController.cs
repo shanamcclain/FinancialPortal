@@ -15,6 +15,7 @@ namespace FinancialPortal.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+
         // GET: Households
         public ActionResult Index()
         {
@@ -59,6 +60,41 @@ namespace FinancialPortal.Controllers
 
             return View(household);
         }
+
+        // GET: Households/Join
+        public ActionResult Join()
+        {
+            return View();
+        }
+
+        // POST: Households/Join
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Join([Bind(Include = "Id,Name")] Invite userInvite)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = new ApplicationUser();
+                var userId = User.Identity.GetUserId();
+                if (string.IsNullOrWhiteSpace(userInvite.Email))
+                    userInvite.Email = user.Email;
+                var dbInvite = db.Invites.FirstOrDefault(e => e.Email == userInvite.Email && !e.HasBeenUsed && e.HHToken == userInvite.HHToken);
+                if(dbInvite != null)
+                {
+                    dbInvite.HasBeenUsed = true;
+                    user.HouseHoldId = dbInvite.HouseholdId;
+                    db.SaveChanges();
+                    return RedirectToAction("Households");
+                }
+                ModelState.AddModelError(string.Empty, "Hey pal, this invite isn't right!");
+                return View("userInvite");
+            }
+
+            return View(userInvite);
+        }
+
 
         // GET: Households/Edit/5
         public ActionResult Edit(int? id)

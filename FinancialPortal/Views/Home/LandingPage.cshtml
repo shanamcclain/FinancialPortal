@@ -50,18 +50,19 @@
                     <div class="navigation">
                         <nav>
                             <ul class="nav pull-right">
-                                <li class="current"><a href="#featured">Home</a></li>
+                                <li><a href="#featured">Home</a></li>
                                 <li><a href="#about">About</a></li>
                                 <li><a href="#services">Services</a></li>
-                                @*<li><a href="#works">Works</a></li>*@
                                 <li><a href="#contact">Contact</a></li>
-                                <li class="dropdown">
+                                <li><a href="@Url.Action("Login", "Account")">Login</a></li>
+                                <li><a href="@Url.Action("Register", "Account")">Register</a></li>
+                                @*<li class="dropdown">
                                     <a href="#">More</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="@Url.Action("Login", "Account")" class="external">Login</a></li>
-                                        <li><a href="@Url.Action("Register", "Account")" class="external">Register</a></li>
+                                        <li><a href="@Url.Action("Login", "Account")">Login</a></li>
+                                        <li><a href="@Url.Action("Register", "Account")">Register</a></li>
                                     </ul>
-                                </li>
+                                </li>*@
                             </ul>
                         </nav>
                     </div>

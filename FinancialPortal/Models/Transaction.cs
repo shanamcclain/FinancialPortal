@@ -9,34 +9,21 @@ namespace FinancialPortal.Models
     public partial class Transaction
     {
         public int Id { get; set; }
-
         public int AccountId { get; set; }
-
         public string Description { get; set; }
-
-        public DateTimeOffset Date { get; set; }
-
+        public DateTime Date { get; set; }
         public decimal Amount { get; set; }
-
         public bool Type { get; set; }
-
         public int CategoryId { get; set; }
-
         [StringLength(128)]
         public string EnteredById { get; set; }
-
         public bool Reconciled { get; set; }
-
         public decimal ReconciledAmount { get; set; }
-
         public bool Void { get; set; }
-
         public bool IsDeleted { get; set; }
 
         public virtual ApplicationUser User { get; set; }
-
         public virtual Category Category { get; set; }
-
         public virtual PersonalAccount PersonalAccount { get; set; }
     }
 }

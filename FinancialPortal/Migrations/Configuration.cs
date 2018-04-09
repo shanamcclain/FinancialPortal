@@ -29,6 +29,16 @@ namespace FinancialPortal.Migrations
                 role = new IdentityRole { Name = "Admin" };
                 manager.Create(role);
             }
+            if (!context.Roles.Any(r => r.Name == "PrimaryUser"))
+            {
+                role = new IdentityRole { Name = "PrimaryUser" };
+                manager.Create(role);
+            }
+            if (!context.Roles.Any(r => r.Name == "SecondaryUser"))
+            {
+                role = new IdentityRole { Name = "SecondaryUser" };
+                manager.Create(role);
+            }
 
             var userStore = new UserStore<ApplicationUser>(context);
             var userManager = new UserManager<ApplicationUser>(userStore);

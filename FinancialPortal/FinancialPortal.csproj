@@ -207,6 +207,10 @@
     <Compile Include="Migrations\201804061440571_clean.Designer.cs">
       <DependentUpon>201804061440571_clean.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804062016098_check_user_householid_prop.cs" />
+    <Compile Include="Migrations\201804062016098_check_user_householid_prop.Designer.cs">
+      <DependentUpon>201804062016098_check_user_householid_prop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Budget.cs" />
@@ -837,6 +841,7 @@
     <Content Include="Views\Transactions\Index.cshtml" />
     <Content Include="Views\Home\LandingPage.cshtml" />
     <Content Include="private.config" />
+    <Content Include="Views\Households\Join.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -857,6 +862,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201804061440571_clean.resx">
       <DependentUpon>201804061440571_clean.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804062016098_check_user_householid_prop.resx">
+      <DependentUpon>201804062016098_check_user_householid_prop.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

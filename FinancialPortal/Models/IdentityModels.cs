@@ -16,6 +16,7 @@ namespace FinancialPortal.Models
         public string DisplayName { get; set; }
         public string ProfilePic { get; set; }
         public string InviteEmail { get; set; }
+        public int? HouseHoldId { get; set; }
 
         public virtual ICollection<Household> Households { get; set; }
         public virtual ICollection<PersonalAccount> PersonalAccounts { get; set; }
@@ -34,7 +35,10 @@ namespace FinancialPortal.Models
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
             // Add custom user claims here
-            userIdentity.AddClaim(new Claim("Name", FullName));
+            if (DisplayName != null)
+            {
+                userIdentity.AddClaim(new Claim("Name", DisplayName));
+            }
             if (ProfilePic != null)
             {
                 userIdentity.AddClaim(new Claim("Image", ProfilePic));

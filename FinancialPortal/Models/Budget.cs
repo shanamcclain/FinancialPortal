@@ -8,7 +8,6 @@ namespace FinancialPortal.Models
 
     public partial class Budget
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Budget()
         {
             BudgetItems = new HashSet<BudgetItem>();
@@ -17,9 +16,7 @@ namespace FinancialPortal.Models
         public string Name { get; set; }
         public int HouseholdId { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BudgetItem> BudgetItems { get; set; }
-
         public virtual Household Household { get; set; }
     }
 }
