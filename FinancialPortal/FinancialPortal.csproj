@@ -197,6 +197,7 @@
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HouseholdsController.cs" />
+    <Compile Include="Controllers\InvitesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PersonalAccountsController.cs" />
     <Compile Include="Controllers\TransactionsController.cs" />
@@ -217,6 +218,7 @@
     <Compile Include="Models\BudgetItem.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Email.cs" />
+    <Compile Include="Models\Helpers\GenerateToken.cs" />
     <Compile Include="Models\Helpers\LoginHelper.cs" />
     <Compile Include="Models\Household.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -842,6 +844,11 @@
     <Content Include="Views\Home\LandingPage.cshtml" />
     <Content Include="private.config" />
     <Content Include="Views\Households\Join.cshtml" />
+    <Content Include="Views\Invites\Create.cshtml" />
+    <Content Include="Views\Invites\Delete.cshtml" />
+    <Content Include="Views\Invites\Details.cshtml" />
+    <Content Include="Views\Invites\Edit.cshtml" />
+    <Content Include="Views\Invites\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

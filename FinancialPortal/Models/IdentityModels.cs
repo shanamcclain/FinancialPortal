@@ -16,7 +16,7 @@ namespace FinancialPortal.Models
         public string DisplayName { get; set; }
         public string ProfilePic { get; set; }
         public string InviteEmail { get; set; }
-        public int? HouseHoldId { get; set; }
+        public int HouseHoldId { get; set; }
 
         public virtual ICollection<Household> Households { get; set; }
         public virtual ICollection<PersonalAccount> PersonalAccounts { get; set; }
